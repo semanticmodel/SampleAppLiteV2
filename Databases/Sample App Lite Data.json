@@ -1,0 +1,119 @@
+{
+  "database": {
+    "name": "Sample App Lite Data",
+    "databaseType": "Oracle 11g",
+    "featureOverrides": [ {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      }
+    ],
+    "connectionPools": [ {
+        "name": "SampleApp_Lite_Xml",
+        "connectionTimeoutUnit": "WHEN_QUERY_COMPLETES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "ODBC200",
+        "description": "SampleAppLite connection pool to XML datasource. This connection pool points the database to the location where physical XML files are stored. The location uses the value of an RPD variable : NQ_SESSION.SERVICEINSTANCEROOT.\r\n",
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 0,
+          "transactionBoundary": 0
+        }
+      }
+    ],
+    "joins": [ {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTableAlias:Sample App Lite Data.D10 Product",
+        "rightTable": "physicalTableAlias:Sample App Lite Data.F10 Revenue Facts (Order grain)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Sample App Lite Data.D10 Product.Prod_Key",
+            "rightColumn": "physicalColumn:Sample App Lite Data.F10 Revenue Facts (Order grain).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTableAlias:Sample App Lite Data.D20 Offices",
+        "rightTable": "physicalTableAlias:Sample App Lite Data.F10 Revenue Facts (Order grain)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Sample App Lite Data.D20 Offices.Office_Key",
+            "rightColumn": "physicalColumn:Sample App Lite Data.F10 Revenue Facts (Order grain).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTableAlias:Sample App Lite Data.D01 Time Day Grain",
+        "rightTable": "physicalTableAlias:Sample App Lite Data.F10 Revenue Facts (Order grain)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Sample App Lite Data.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:Sample App Lite Data.F10 Revenue Facts (Order grain).Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey#1",
+        "leftTable": "physicalTableAlias:Sample App Lite Data.D02 Time Month Grain",
+        "rightTable": "physicalTableAlias:Sample App Lite Data.F10 Revenue Facts (Order grain)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Sample App Lite Data.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:Sample App Lite Data.F10 Revenue Facts (Order grain).Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Revenue Facts Aggregate_FKey",
+        "leftTable": "physicalTableAlias:Sample App Lite Data.D10 Product",
+        "rightTable": "physicalTableAlias:Sample App Lite Data.F11 Revenue Facts Aggregate",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Sample App Lite Data.D10 Product.Prod_Key",
+            "rightColumn": "physicalColumn:Sample App Lite Data.F11 Revenue Facts Aggregate.Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Revenue Facts Aggregate_FKey#2",
+        "leftTable": "physicalTableAlias:Sample App Lite Data.D02 Time Month Grain",
+        "rightTable": "physicalTableAlias:Sample App Lite Data.F11 Revenue Facts Aggregate",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Sample App Lite Data.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:Sample App Lite Data.F11 Revenue Facts Aggregate.Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "F20 Facts Targets_FKey#2",
+        "leftTable": "physicalTableAlias:Sample App Lite Data.D10 Product",
+        "rightTable": "physicalTableAlias:Sample App Lite Data.F20 Targets Facts",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Sample App Lite Data.D10 Product.Prod_Key",
+            "rightColumn": "physicalColumn:Sample App Lite Data.F20 Targets Facts.Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F20 Facts Targets_FKey#4",
+        "leftTable": "physicalTableAlias:Sample App Lite Data.D20 Offices",
+        "rightTable": "physicalTableAlias:Sample App Lite Data.F20 Targets Facts",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Sample App Lite Data.D20 Offices.Office_Key",
+            "rightColumn": "physicalColumn:Sample App Lite Data.F20 Targets Facts.Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F20 Facts Targets_FKey",
+        "leftTable": "physicalTableAlias:Sample App Lite Data.D02 Time Month Grain",
+        "rightTable": "physicalTableAlias:Sample App Lite Data.F20 Targets Facts",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Sample App Lite Data.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:Sample App Lite Data.F20 Targets Facts.Bill_Mth_Key"
+          }
+        ]
+      }
+    ]
+  }
+}

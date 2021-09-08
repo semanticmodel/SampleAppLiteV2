@@ -1,9 +1,0 @@
-{
-  "initBlock": {
-    "name": "static",
-    "description": "Generated variables",
-    "type": "STATIC",
-    "variables": [
-    ]
-  }
-}

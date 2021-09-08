@@ -1,0 +1,37 @@
+{
+  "physicalTable": {
+    "name": "SAMP_TARGETS_F",
+    "description": "TARGETS FACTS Physical table. This table is not directly used by the logical model, it is accessed via the aliases setup in the physical diagram. The database is of XML type, the setup of this physical table leverages the value of an RPD variable : NQ_SESSION.SERVICEINSTANCEROOT (see the XML tab in this dialog box).",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "uri": "VALUEOF(NQ_SESSION.SERVICEINSTANCEROOT)/data/SAMP_TARGETS_F.xml",
+    "physicalColumns": [ {
+        "name": "Revenue",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "Prod_Key",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Office_Key",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Units",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Bill_Mth_Key",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

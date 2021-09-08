@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "D01 Time Day Grain",
+    "sourceTable": "physicalTable:Sample App Lite Data.SAMP_TIME_DAY_D",
+    "caching": {
+      "enable": true
+    }
+  }
+}

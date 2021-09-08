@@ -1,0 +1,57 @@
+{
+  "businessModel": {
+    "name": "SampleApp Lite",
+    "description": "SampleAppLite Business Model. This Business model is a minimal contruct to allow users to check that installation went through. To access a set of Samples that fully illustrate OBIEE 11g modeling capabilities, refer to the full SampleApp set freely availabe on OTN(Oracle Technology Network), OBIEE page.",
+    "joins": [      {
+        "name": "1 - Sample App#1:1 - Sample App#1:Relationship_2004:84341261071730",
+        "leftTable": "logicalTable:SampleApp Lite.F1 Targets Base Measures",
+        "rightTable": "logicalTable:SampleApp Lite.D1 Products",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "1 - Sample App#1:1 - Sample App#1:Relationship_2004:195391212404727#1",
+        "leftTable": "logicalTable:SampleApp Lite.D3 Orders (Facts Attributes)",
+        "rightTable": "logicalTable:SampleApp Lite.F0 Revenue Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:1 - Sample App#1:Relationship_2004:6111210742953#1",
+        "leftTable": "logicalTable:SampleApp Lite.D0 Time",
+        "rightTable": "logicalTable:SampleApp Lite.F0 Revenue Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:1 - Sample App#1:Relationship_2004:6141210742953#1",
+        "leftTable": "logicalTable:SampleApp Lite.D1 Products",
+        "rightTable": "logicalTable:SampleApp Lite.F0 Revenue Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY",
+        "drivingTable": "logicalTable:SampleApp Lite.D1 Products"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:318001267628943",
+        "leftTable": "logicalTable:SampleApp Lite.D2 Offices",
+        "rightTable": "logicalTable:SampleApp Lite.F0 Revenue Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:318131267629164",
+        "leftTable": "logicalTable:SampleApp Lite.D2 Offices",
+        "rightTable": "logicalTable:SampleApp Lite.F1 Targets Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:1 - Sample App#1:Relationship_2004:84311261071730",
+        "leftTable": "logicalTable:SampleApp Lite.F1 Targets Base Measures",
+        "rightTable": "logicalTable:SampleApp Lite.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      }
+    ]
+  }
+}

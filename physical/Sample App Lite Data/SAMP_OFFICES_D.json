@@ -1,0 +1,66 @@
+{
+  "physicalTable": {
+    "name": "SAMP_OFFICES_D",
+    "description": "OFFICES Dimension Physical table. This table is not directly used by the logical model, it is accessed via the aliases setup in the physical diagram. The database is of XML type, the setup of this physical table leverages the value of an RPD variable : NQ_SESSION.SERVICEINSTANCEROOT (see the XML tab in this dialog box).",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "uri": "VALUEOF(NQ_SESSION.SERVICEINSTANCEROOT)/data/SAMP_OFFICES_D.xml",
+    "physicalColumns": [ {
+        "name": "Company_Key",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Org_Key",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dept_Key",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Address_Key",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Department",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "Organization",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "Office_Dsc",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "Office_Key",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Company",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "Sequence",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -369,7 +369,7 @@
             "Per Name Year"
           ],
           "displayKey": "Per Name Year",
-          "chronologicalKey": "Per Name Year"
+          "chronologicalKey": ["Per Name Year"]
         },
         {
           "name": "Half",
@@ -379,7 +379,7 @@
             "Per Name Half"
           ],
           "displayKey": "Per Name Half",
-          "chronologicalKey": "Per Name Half"
+          "chronologicalKey": ["Per Name Half"]
         },
         {
           "name": "Quarter",
@@ -389,7 +389,7 @@
             "Per Name Qtr"
           ],
           "displayKey": "Per Name Qtr",
-          "chronologicalKey": "Per Name Qtr"
+          "chronologicalKey": ["Per Name Qtr"]
         },
         {
           "name": "Month",
@@ -399,7 +399,7 @@
             "Per Name Month"
           ],
           "displayKey": "Per Name Month",
-          "chronologicalKey": "Per Name Month"
+          "chronologicalKey": ["Per Name Month"]
         },
         {
           "name": "Week",
@@ -409,7 +409,7 @@
             "Per Name Week"
           ],
           "displayKey": "Per Name Week",
-          "chronologicalKey": "Per Name Week"
+          "chronologicalKey": ["Per Name Week"]
         },
         {
           "name": "Day Detail",
@@ -419,7 +419,7 @@
             "Calendar Date"
           ],
           "displayKey": "Calendar Date",
-          "chronologicalKey": "Calendar Date"
+          "chronologicalKey": ["Calendar Date"]
         }
       ],
       "logicalHierarchies": [ {

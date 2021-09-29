@@ -1,5 +1,5 @@
 {
-  "physicalTableAlias": {
+  "physicalTable": {
     "name": "D0 Time Dimension Tables ----------------------------------------",
     "description": "Dummy object used to help presentation of physical layer objects.",
     "sourceTable": "physicalTable:Sample App Lite Data.Samp_ Lite Source Tables ========================"

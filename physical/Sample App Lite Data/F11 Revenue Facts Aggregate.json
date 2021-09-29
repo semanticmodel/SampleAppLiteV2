@@ -1,5 +1,5 @@
 {
-  "physicalTableAlias": {
+  "physicalTable": {
     "name": "F11 Revenue Facts Aggregate",
     "description": "Alias to the Revenue Aggregated 1 Facts Physical table.",
     "sourceTable": "physicalTable:Sample App Lite Data.SAMP_REVENUE_A",
